@@ -1,6 +1,6 @@
 class Number_guess
   
-  def initialize(ary = [], hit = 0, cnt = 0, list = [])
+  def initialize(ary = list = [], hit = cnt = 0)
     @ary = ary
     @hit = hit
     @cnt = cnt
@@ -23,8 +23,7 @@ class Number_guess
   end
   
   def hit_blw #hit&blow判断
-    blw = 0
-    @hit = 0
+    blw = @hit = 0
     @list.each.with_index do |v,k| #listのkey,valueをそれぞれ取り出す
       if v == @ary[k] #hit判定
         @hit += 1
